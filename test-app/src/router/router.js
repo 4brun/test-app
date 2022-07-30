@@ -1,20 +1,20 @@
-import UsersPage from "@/pages/UsersPage"
-import PostsPage from "@/pages/PostsPage"
-import CommentsPage from '@/pages/CommentsPage'
+import Users from '@/components/Users'
+import Posts from '@/components/Posts'
+import Comments from '@/components/Comments'
 import { createRouter, createWebHistory } from "vue-router"
 
 const routes = [
    {
       path: '/',
-      component: UsersPage
+      component: Users
    },
    {
       path: '/posts',
-      component: PostsPage
+      component: Posts
    },
    {
       path: '/comments',
-      component: CommentsPage
+      component: Comments
    }
 ]
 
