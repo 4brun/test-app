@@ -3,11 +3,11 @@
     <div class="content__item" v-for="item in items" :key="item.id">
       <div v-if="item.name && item.body">
         <h4>{{ item.name }}</h4>
-        <p><strong>Сообщение</strong> {{ item.body }}</p>
+        <p><strong>Сообщение :</strong> {{ item.body }}</p>
       </div>
       <div v-else-if="item.title">
         <h4>{{ item.title }}</h4>
-        <p><strong>Описание</strong> {{ item.body }}</p>
+        <p><strong>Описание :</strong> {{ item.body }}</p>
       </div>
       <div v-else-if="item.username">
         <h4>{{ item.username }}</h4>
@@ -29,4 +29,8 @@ export default {
 </script>
 
 <style>
+.content__item {
+  border: 2px solid #42b983;
+  margin: 10px;
+}
 </style>

@@ -24,10 +24,6 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-.content__item {
-  border: 2px solid #42b983;
-  margin: 10px;
-}
 h3 {
   margin: 40px 0 0;
 }
