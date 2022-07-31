@@ -32,5 +32,6 @@ export default {
 .content__item {
   border: 2px solid #42b983;
   margin: 10px;
+  box-shadow: 2px 2px 4px gray;
 }
 </style>
