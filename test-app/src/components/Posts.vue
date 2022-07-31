@@ -1,8 +1,7 @@
 <template>
   <div class="content">
     <div class="content__item" v-for="post in posts" :key="post.id">
-      <h4>Название</h4>
-      {{ post.title }}
+      <h4>{{ post.title }}</h4>
       <p><strong>Описание</strong> {{ post.body }}</p>
     </div>
   </div>
@@ -30,5 +29,4 @@ export default {
 
 
 <style scoped>
-
 </style>

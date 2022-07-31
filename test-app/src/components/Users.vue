@@ -1,8 +1,8 @@
 <template>
   <div class="content">
     <div class="content__item" v-for="user in users" :key="user.id">
-      <h4>Имя</h4>
-      {{ user.name }}
+      <h4>{{ user.username }}</h4>
+      <p>{{ user.name }}</p>
     </div>
   </div>
 </template>
@@ -29,5 +29,4 @@ export default {
 
 
 <style scoped>
-
 </style>

@@ -1,8 +1,7 @@
 <template>
   <div class="content">
     <div class="content__item" v-for="comment in comments" :key="comment.id">
-      <h4>Имя</h4>
-      {{ comment.name }}
+      <h4>{{ comment.name }}</h4>
       <p><strong>Сообщение</strong> {{ comment.body }}</p>
     </div>
   </div>
@@ -14,7 +13,7 @@ export default {
   name: "Comments",
   methods: {
     ...mapActions({
-      fetchComments: GET_COMMENTS_FROM_API,
+      fetchComments: "GET_COMMENTS_FROM_API",
     }),
   },
   mounted() {
@@ -30,5 +29,4 @@ export default {
 
 
 <style scoped>
-
 </style>
