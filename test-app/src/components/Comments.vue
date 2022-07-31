@@ -1,16 +1,13 @@
 <template>
-  <div class="content">
-    <div class="content__item" v-for="comment in comments" :key="comment.id">
-      <h4>{{ comment.name }}</h4>
-      <p><strong>Сообщение</strong> {{ comment.body }}</p>
-    </div>
-  </div>
+  <card :items="this.comments" />
 </template>
 
 <script>
+import Card from "@/UI/Card.vue";
 import { mapActions, mapGetters } from "vuex";
 export default {
   name: "Comments",
+  components: { Card },
   methods: {
     ...mapActions({
       fetchComments: "GET_COMMENTS_FROM_API",

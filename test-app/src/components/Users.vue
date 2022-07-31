@@ -1,16 +1,13 @@
 <template>
-  <div class="content">
-    <div class="content__item" v-for="user in users" :key="user.id">
-      <h4>{{ user.username }}</h4>
-      <p>{{ user.name }}</p>
-    </div>
-  </div>
+  <card :items="this.users" />
 </template>
 
 <script>
 import { mapGetters, mapActions } from "vuex";
+import Card from "@/UI/Card.vue";
 export default {
   name: "Users",
+  components: { Card },
   methods: {
     ...mapActions({
       getUsers: "GET_USERS_FROM_API",

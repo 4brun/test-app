@@ -1,16 +1,13 @@
 <template>
-  <div class="content">
-    <div class="content__item" v-for="post in posts" :key="post.id">
-      <h4>{{ post.title }}</h4>
-      <p><strong>Описание</strong> {{ post.body }}</p>
-    </div>
-  </div>
+  <card :items="this.posts" />
 </template>
 
 <script>
 import { mapActions, mapGetters } from "vuex";
+import Card from "@/UI/Card.vue";
 export default {
   name: "Posts",
+  components: { Card },
   methods: {
     ...mapActions({
       fetchPosts: "GET_POSTS_FROM_API",
